@@ -7,7 +7,7 @@ Este projeto foi originado pela integração da base de dados do MySQL com Power
 
 ## Mesclar consultas employee e department:
 ```
-select fname as Nome, d.dname as Departamento from employee as e
+select concat(e.Fname, "  ", e.Minit, " ", e.Lname) as Nome, d.dname as Departamento from employee as e
 inner join departament as d where e.dno = d.dnumber;
 ```
 
